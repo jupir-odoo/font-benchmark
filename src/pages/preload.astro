@@ -1,5 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+export const demoMetadata = {
+    href: "/preload",
+    number: "04",
+    title: "Preload font",
+    description:
+        'In this example, font faces definitions are loaded from Google Fonts with a stylesheet link, and the main font file (.woff2) is preloaded with rel="preload".',
+};
 ---
 
 <Layout>
@@ -24,12 +32,8 @@ import Layout from "../layouts/Layout.astro";
         rel="stylesheet"
     />
 
-    <h1>Hello world</h1>
-    <p>
-        In this example, fonts faces are loaded from google fonts with
-        `&lt;link&gt;` in the `&lt;head&gt;`, but the main one is preloaded with
-        `rel="preload"`.
-    </p>
+    <h1>{demoMetadata.title}</h1>
+    <p>{demoMetadata.description}</p>
 </Layout>
 
 <style>

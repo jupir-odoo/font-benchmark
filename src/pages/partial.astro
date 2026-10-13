@@ -1,5 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+export const demoMetadata = {
+    href: "/partial",
+    number: "02",
+    title: "Partial inlining",
+    description:
+        'In this example, the main font-face definition is inlined. The rest is loaded from Google Fonts via a "link" element.',
+};
 ---
 
 <Layout>
@@ -15,11 +23,8 @@ import Layout from "../layouts/Layout.astro";
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet"
     />
-    <h1>Hello world</h1>
-    <p>
-        In this example, the main fonts faces are inlined. The rest is loaded
-        from Google Fonts via `&lt;link&gt;`.
-    </p>
+    <h1>{demoMetadata.title}</h1>
+    <p>{demoMetadata.description}</p>
 </Layout>
 
 <style>

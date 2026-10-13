@@ -1,5 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+export const demoMetadata = {
+    href: "/links",
+    number: "03",
+    title: "Links in the head",
+    description:
+        "In this example, font face definitions are loaded from Google Fonts with a stylesheet link. This is the approach recommended by the Google Fonts website.",
+};
 ---
 
 <Layout>
@@ -16,11 +24,8 @@ import Layout from "../layouts/Layout.astro";
         rel="stylesheet"
     />
 
-    <h1>Hello world</h1>
-    <p>
-        In this example, fonts faces are loaded from google fonts with
-        `&lt;link&gt;` in the `&lt;head&gt;`.
-    </p>
+    <h1>{demoMetadata.title}</h1>
+    <p>{demoMetadata.description}</p>
 </Layout>
 
 <style>
