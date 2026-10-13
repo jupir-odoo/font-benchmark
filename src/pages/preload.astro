@@ -1,10 +1,12 @@
 ---
+import { base64 } from "astro:schema";
 import Layout from "../layouts/Layout.astro";
 
 export const demoMetadata = {
     href: "/preload",
     number: "04",
-    title: "Preload font",
+    title: "Links + Preload",
+    badge: "fastest font loading",
     description:
         'In this example, font faces definitions are loaded from Google Fonts with a stylesheet link, and the main font file (.woff2) is preloaded with rel="preload".',
     pagespeed:
