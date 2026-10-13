@@ -3,6 +3,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
+    <link
+        slot="head"
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    />
     <h1>Hello world</h1>
     <p>In this example, all fonts faces are inlined.</p>
 </Layout>
