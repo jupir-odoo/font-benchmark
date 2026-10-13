@@ -7,6 +7,8 @@ export const demoMetadata = {
     title: "Partial inlining",
     description:
         'In this example, the main font-face definition is inlined. The rest is loaded from Google Fonts via a "link" element.',
+    pagespeed:
+        "https://pagespeed.web.dev/analysis/https-font-benchmark-netlify-app-partial/v964t59nju?form_factor=desktop",
 };
 ---
 
@@ -25,6 +27,11 @@ export const demoMetadata = {
     />
     <h1>{demoMetadata.title}</h1>
     <p>{demoMetadata.description}</p>
+    <p>
+        <a href={demoMetadata.pagespeed} target="_blank">
+            PageSpeed Insights
+        </a>
+    </p>
 </Layout>
 
 <style>

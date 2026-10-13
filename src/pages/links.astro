@@ -7,6 +7,8 @@ export const demoMetadata = {
     title: "Links in the head",
     description:
         "In this example, font face definitions are loaded from Google Fonts with a stylesheet link. This is the approach recommended by the Google Fonts website.",
+    pagespeed:
+        "https://pagespeed.web.dev/analysis/https-font-benchmark-netlify-app-links/34yotwggks?form_factor=desktop",
 };
 ---
 
@@ -26,6 +28,11 @@ export const demoMetadata = {
 
     <h1>{demoMetadata.title}</h1>
     <p>{demoMetadata.description}</p>
+    <p>
+        <a href={demoMetadata.pagespeed} target="_blank">
+            PageSpeed Insights
+        </a>
+    </p>
 </Layout>
 
 <style>

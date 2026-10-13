@@ -7,11 +7,12 @@ export const demoMetadata = {
     title: "Preload font",
     description:
         'In this example, font faces definitions are loaded from Google Fonts with a stylesheet link, and the main font file (.woff2) is preloaded with rel="preload".',
+    pagespeed:
+        "https://pagespeed.web.dev/analysis/https-font-benchmark-netlify-app-preload/q540kf47k9?form_factor=desktop",
 };
 ---
 
 <Layout>
-    <link slot="head" rel="preconnect" href="https://fonts.googleapis.com" />
     <link
         slot="head"
         rel="preload"
@@ -20,6 +21,7 @@ export const demoMetadata = {
         type="font/woff2"
         crossorigin
     />
+    <link slot="head" rel="preconnect" href="https://fonts.googleapis.com" />
     <link
         slot="head"
         rel="preconnect"
@@ -34,6 +36,11 @@ export const demoMetadata = {
 
     <h1>{demoMetadata.title}</h1>
     <p>{demoMetadata.description}</p>
+    <p>
+        <a href={demoMetadata.pagespeed} target="_blank">
+            PageSpeed Insights
+        </a>
+    </p>
 </Layout>
 
 <style>

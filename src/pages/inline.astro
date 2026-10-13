@@ -6,6 +6,8 @@ export const demoMetadata = {
     number: "01",
     title: "Inline all font faces",
     description: "In this example, all font-face definitions are inlined.",
+    pagespeed:
+        "https://pagespeed.web.dev/analysis/https-font-benchmark-netlify-app-inline/dpgol0wizq?form_factor=desktop",
 };
 ---
 
@@ -194,4 +196,9 @@ export const demoMetadata = {
     </style>
     <h1>{demoMetadata.title}</h1>
     <p>{demoMetadata.description}</p>
+    <p>
+        <a href={demoMetadata.pagespeed} target="_blank">
+            PageSpeed Insights
+        </a>
+    </p>
 </Layout>
