@@ -21,60 +21,62 @@
                 <a class="navbar-brand" href="/">
                     Font Benchmark
                 </a>
-                <div class="navbar-nav flex-row flex-wrap gap-1">
+                <div class="navbar-nav flex-row flex-wrap gap-2">
                     <a
                         class:list={[
                             "nav-link",
-                            Astro.url.pathname === "/inline" && "active",
+                            Astro.url.pathname === "/links/" && "active",
                         ]}
-                        href="/inline"
+                        href="/links/"
                         aria-current={
-                            Astro.url.pathname === "/inline"
+                            Astro.url.pathname === "/links/"
                                 ? "page"
                                 : undefined
                         }
                     >
-                        Inlined
+                        1. Links
                     </a>
                     <a
                         class:list={[
                             "nav-link",
-                            Astro.url.pathname === "/partial" && "active",
+                            Astro.url.pathname === "/partial/" && "active",
                         ]}
-                        href="/partial"
+                        href="/partial/"
                         aria-current={
-                            Astro.url.pathname === "/partial"
+                            Astro.url.pathname === "/partial/"
                                 ? "page"
                                 : undefined
                         }
                     >
-                        Partial
+                        2. Partially inlined
                     </a>
                     <a
                         class:list={[
                             "nav-link",
-                            Astro.url.pathname === "/links" && "active",
+                            Astro.url.pathname === "/inline/" && "active",
                         ]}
-                        href="/links"
+                        href="/inline/"
                         aria-current={
-                            Astro.url.pathname === "/links" ? "page" : undefined
-                        }
-                    >
-                        Links
-                    </a>
-                    <a
-                        class:list={[
-                            "nav-link",
-                            Astro.url.pathname === "/preload" && "active",
-                        ]}
-                        href="/preload"
-                        aria-current={
-                            Astro.url.pathname === "/preload"
+                            Astro.url.pathname === "/inline/"
                                 ? "page"
                                 : undefined
                         }
                     >
-                        Preload
+                        3. Fully inlined
+                    </a>
+                    <a
+                        class:list={[
+                            "nav-link",
+                            Astro.url.pathname === "/preload/" && "active",
+                        ]}
+                        href="/preload/"
+                        aria-current={
+                            Astro.url.pathname === "/preload/"
+                                ? "page"
+                                : undefined
+                        }
+                    >
+                        4. Preload
                     </a>
                 </div>
             </div>
